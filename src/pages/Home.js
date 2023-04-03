@@ -2,13 +2,8 @@ import BlogList from "../components/BlogList";
 import useFetch from "../components/useFetch";
 
 const Home = () => {
-  const {data:blogs , isLoading, error} = useFetch("http://localhost:4000/blogs")
+  const {data:blogs , isLoading, error} = useFetch("https://mauve-cygnet-gown.cyclic.app/blogs")
 
-
-  // const handleDelete = (id) => {
-  //   const filteredBlogs = blogs.filter((blog) => blog.id !== id);
-  //   setBlogs(filteredBlogs);
-  // };
 
   return (
     <div className="home">

@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
 import useFetch from "../components/useFetch";
 
 const BlogDetails = () => {
@@ -8,7 +8,17 @@ const BlogDetails = () => {
     data: blog,
     isLoading,
     error,
-  } = useFetch("http://localhost:4000/blogs/" + id);
+  } = useFetch("https://mauve-cygnet-gown.cyclic.app/blogs/" + id);
+  const navigate = useNavigate();
+
+
+  const deleteHandler = () => {
+    fetch("https://mauve-cygnet-gown.cyclic.app/blogs/"+ id, {
+      method: "DELETE",
+    }).then(() => {
+      navigate("/");
+    });
+  };
 
   return (
     <div className="blog-details">
@@ -16,14 +26,17 @@ const BlogDetails = () => {
       {error && <div>{error}</div>}
       {blog && ( 
         <article>
-          <h2>{blog.title}</h2>
-          <p>Written by - {blog.author}</p>
-          <div>{blog.body}</div>
+          <h2 className="blog-details-title">{blog.title}</h2>
+          <p  className="blog-details-author">Written by - {blog.author}</p>
+          <div className="blog-details-body">{blog.body}</div>
+          <button className="delete-btn" onClick={() => deleteHandler(blog.id)}>
+            Delete
+          </button>
+
+          
         </article>
       )}
-      {/* <button className="delete-btn" onClick={() => handleDelete(blog.id)}>
-            Delete
-          </button> */}
+      
     </div>
   );
 };

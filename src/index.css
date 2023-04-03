@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Allura&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
-  --black: rgb(0,0, 0);
+  --black: rgb(0, 0, 0);
   --white: rgb(255, 255, 255);
   --hover-clr: rgb(218, 249, 255);
   --primary-clr: rgb(0, 0, 255);
@@ -29,8 +29,6 @@ body {
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 8%;
 }
 
 .logo {
@@ -44,6 +42,8 @@ body {
   width: 90%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
 }
 
 .links {
@@ -77,7 +77,7 @@ body {
   margin: 0px 5px 5px 0px;
 }
 
-.pages{
+.pages {
   padding-top: 5rem;
 }
 
@@ -95,7 +95,6 @@ body {
 
 .home {
   width: 80%;
-  height: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -113,9 +112,9 @@ body {
   border-radius: 5px;
 }
 
-.blog-link{
+.blog-link {
   text-decoration: none;
-  color:var(--black);
+  color: var(--black);
 }
 
 .preview-title {
@@ -131,23 +130,16 @@ body {
   font-size: 20px;
   font-weight: 500;
   text-decoration: underline;
+  text-transform: capitalize;
 }
 
 .blog-author {
   padding-left: 10px;
   font-style: italic;
+  text-transform: capitalize;
 }
 
-.blog-details{
-  margin: auto;
-  width: 50%;
-}
-
-.blog-details p {
-font-style: italic;
-}
-
-.new-blog{
+.new-blog {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -155,11 +147,11 @@ font-style: italic;
   padding: 2rem 5px;
 }
 
-.new-blog-header{
+.new-blog-header {
   color: var(--primary-clr);
 }
 
-.form{
+.form {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -167,15 +159,14 @@ font-style: italic;
   padding: 2rem;
 }
 
-
-.form label{
+.form label {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 3px;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
-.form input{
+.form input {
   font-family: "Poppins", sans-serif;
   padding: 5px 10px;
   font-size: 20px;
@@ -185,7 +176,7 @@ font-style: italic;
   outline: none;
 }
 
-.form textarea{
+.form textarea {
   font-family: "Poppins", sans-serif;
   padding: 10px;
   font-size: 20px;
@@ -193,14 +184,14 @@ font-style: italic;
   border-radius: 5px;
   border: 2px solid var(--primary-clr);
   outline: none;
-  line-height:1.5;
+  line-height: 1.5;
 }
 
-input:focus{
-outline: none;
-border-radius: 0;
-border: 0px;
-border-bottom: 2px solid var(--primary-clr);
+input:focus {
+  outline: none;
+  border-radius: 0;
+  border: 0px;
+  border-bottom: 2px solid var(--primary-clr);
 }
 
 .submit-btn {
@@ -222,19 +213,36 @@ border-bottom: 2px solid var(--primary-clr);
   color: var(--black);
 }
 
-.submit-btn:active{
-  scale:0.95;
+.submit-btn:active {
+  scale: 0.95;
   box-shadow: 0px solid var(--white);
 }
 
-/* 
+.blog-details {
+  margin: auto;
+  width: 50%;
+}
+
+.blog-details-title {
+  text-transform: capitalize;
+}
+
+.blog-details-author {
+  margin: 3px auto;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.blog-details-body {
+  padding: 15px 5px 5px 30px;
+}
+
 .delete-btn {
   font-family: "Poppins", sans-serif;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.5px;
   padding: 3px 8px;
-  margin-left: 10px;
+  margin: 1rem 10px 2rem 3rem;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -244,12 +252,49 @@ border-bottom: 2px solid var(--primary-clr);
 .delete-btn:hover {
   color: var(--white);
   background-color: var(--primary-clr);
-} */
+}
 
-/* @media only screen and (max-width: 600px) {
-  .preview {
-    margin: auto 0px;
-    padding: 1rem 0px;
+@media only screen and (max-width: 600px) {
+  .logo {
+    font-size: 25px;
+  }
+  .navbar {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .link {
+    width: auto;
+    font-size: 16px;
+  }
+  .icon {
+    margin: 0px 5px 3px 0px;
+  }
+  .home {
+    margin: auto;
     width: 90%;
   }
-} */
+  .preview-title {
+    font-size: 22px;
+  }
+  .blog-title {
+    font-size: 18px;
+  }
+  .blog-author {
+    font-size: 13px;
+  }
+  .blog-details {
+    width: 80%;
+  }
+  .blog-details-author {
+    font-size: 13px;
+  }
+  .blog-details-body {
+    padding: 15px 5px 5px 15px;
+    font-size: 15px;
+  }
+  .blog-details-title {
+    font-size: 18px;
+  }
+}
