@@ -261,12 +261,12 @@ input:focus {
   .navbar {
     width: 95%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
   }
   .link {
     width: auto;
-    font-size: 16px;
+    font-size: 14px;
   }
   .icon {
     margin: 0px 5px 3px 0px;
@@ -296,5 +296,19 @@ input:focus {
   }
   .blog-details-title {
     font-size: 18px;
+  }
+  .new-blog {
+    width: 90%;
+  }
+  .form {
+    margin: auto;
+    padding: 2rem 0;
+    width: 90%;
+  }
+  .new-blog-header {
+    font-size: 20px;
+  }
+  .form label {
+    font-size: 16px;
   }
 }
