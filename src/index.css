@@ -303,7 +303,7 @@ input:focus {
   .form {
     margin: auto;
     padding: 2rem 0;
-    width: 90%;
+    width: 95%;
   }
   .new-blog-header {
     font-size: 20px;
@@ -312,11 +312,11 @@ input:focus {
     font-size: 16px;
   }
   .form input{
-    width: 90%;
+    width: 95%;
     font-size: 16px;
   }
   .form textarea{
-    width: 90%;
+    width: 95%;
     font-size: 16px;
   }
 }
