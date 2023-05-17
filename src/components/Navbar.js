@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
     <nav className="navbar-container">
       <div className="navbar">
-        <span className="logo">Jega Blogs</span>
+        <span className="logo">Daily Blogs</span>
         <div className="links">
           <Link to="/" className="link">
             <AiFillHome className="icon" />
